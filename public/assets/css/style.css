@@ -1,0 +1,44 @@
+body {
+  background: url(../images/background-cute-dots-kawaii-Favim.com-2099497.jpg);
+  background-size: cover;
+}
+
+main {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .card {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    max-width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .jumbotron {
+    padding: 0 20% !important;
+  }
+  main {
+    padding: 0 10% !important;
+  }
+}
+.jumbotron {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+label {
+  font-size: 20pt;
+}

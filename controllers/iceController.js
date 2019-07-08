@@ -5,6 +5,7 @@ var router = express.Router();
 var iceCream = require("../models/icecream.js");
 
 router.get("/", function(req, res) {
+  debugger;
   iceCream.selectAll(function(data) {
     var hbsObject = {
       iceCreams: data
