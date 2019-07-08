@@ -23,7 +23,7 @@ router.post("/api/icecreams", function(req, res) {
     res.json({ id: result.insertId });
   };
 
-  iceCream.insertOne(iceCreamName, cb);
+  iceCream.insertOne([iceCreamName], cb);
 });
 
 router.put("/api/icecreams/:id", function(req, res) {

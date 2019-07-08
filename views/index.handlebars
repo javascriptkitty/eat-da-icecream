@@ -9,7 +9,7 @@
                 <input type="text" class="form-control border-dark" id="usersInput">
 
             </div>
-            <a class="btn btn-light btn-lg px-5 border-dark" href="#" role="button " id="submit">GET IT</a>
+            <a class="btn btn-light btn-lg px-5 border-dark" type="submit" role="button " id="submit">GET IT</a>
         </div>
         <div>
             <img src="assets/images/icekitty.png" height="300px">
@@ -23,13 +23,15 @@
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> --}}
                 <ul>
                     {{#each iceCreams}}
+                    {{#unless this.devored}}
                     <li>
                         {{name}}
-                        <button class="devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+                        <button class="devourIt" data-id="{{id}}">
                             Devour it!
                         </button>
-                        <button class="delete" data-id="{{id}}">DELETE!</button>
+
                     </li>
+                    {{/unless}}
                     {{/each}}
                 </ul>
             </div>
@@ -39,7 +41,17 @@
             <div class="card-body">
                 {{!-- <h5 class="card-title">Special title treatment</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> --}}
+                <ul>
+                    {{#each iceCreams}}
+                    {{#if this.devored}}
+                    <li>
+                        {{name}}
 
+                        <button class="delete" data-id="{{id}}">DELETE!</button>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
             </div>
         </div>
     </main>
