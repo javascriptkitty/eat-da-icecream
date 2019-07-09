@@ -28,7 +28,12 @@ main {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  main {
+    padding: 0 10% !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .jumbotron {
     padding: 0 20% !important;
   }
@@ -36,7 +41,7 @@ main {
     padding: 0 10% !important;
   }
   .card {
-    min-width: 350px !important;
+    min-width: 400px !important;
   }
 }
 .jumbotron {
