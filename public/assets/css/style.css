@@ -1,6 +1,8 @@
 body {
   background: url(../images/background-cute-dots-kawaii-Favim.com-2099497.jpg);
   background-size: cover;
+  font-family: "Esteban", serif !important;
+  font-size: 1.3em !important;
 }
 
 main {
@@ -22,15 +24,19 @@ main {
 @media only screen and (min-width: 768px) {
   .card {
     max-width: 48%;
+    min-width: 330px !important;
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1000px) {
   .jumbotron {
     padding: 0 20% !important;
   }
   main {
     padding: 0 10% !important;
+  }
+  .card {
+    min-width: 350px !important;
   }
 }
 .jumbotron {
@@ -39,6 +45,36 @@ main {
   justify-content: space-around;
 }
 
+.jumbotron a {
+  border-radius: 5px !important;
+}
+
 label {
   font-size: 20pt;
 }
+
+.display-3 {
+  font-family: "Berkshire Swash", cursive;
+}
+
+button {
+  border-radius: 5px !important;
+}
+li {
+  display: flex;
+  justify-content: space-between !important;
+}
+li button {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 0.8em;
+  height: 30px;
+}
+
+li button:hover {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.card-body {
+  line-height: 2;
+}
+/* font-family: 'Rye', cursive; */

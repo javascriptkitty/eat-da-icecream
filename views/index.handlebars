@@ -5,11 +5,12 @@
             <h1 class="display-3 mt-3">Gelateria</h1>
             <div class="form-group ">
 
-                <label for="usersInput">Which flavor?</label>
+                <label for="usersInput" class="font-weight-bolder">Which flavor?</label>
                 <input type="text" class="form-control border-dark" id="usersInput">
 
             </div>
-            <a class="btn btn-light btn-lg px-5 border-dark" type="submit" role="button " id="submit">GET IT</a>
+            <button class="btn btn-light btn-outline-dark px-4" type="submit" id="submit">GET IT</button>
+
         </div>
         <div>
             <img src="assets/images/icekitty.png" height="300px">
@@ -17,13 +18,12 @@
     </div>
     <main>
         <div class="card border-dark ">
-            <div class="card-header text-center">Waiting to be devoured</div>
-            <div class="card-body">
-                {{!-- <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> --}}
+            <div class="card-header text-center font-weight-bold">Waiting to be devoured</div>
+            <div class="card-body pl-0">
+
                 <ul>
                     {{#each iceCreams}}
-                    {{#unless this.devored}}
+                    {{#unless this.devoured}}
                     <li>
                         {{name}}
                         <button class="devourIt" data-id="{{id}}">
@@ -37,13 +37,12 @@
             </div>
         </div>
         <div class="card border-dark ">
-            <div class="card-header text-center">Devoured</div>
-            <div class="card-body">
-                {{!-- <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> --}}
+            <div class="card-header text-center font-weight-bold">Devoured</div>
+            <div class="card-body pl-0">
+
                 <ul>
                     {{#each iceCreams}}
-                    {{#if this.devored}}
+                    {{#if this.devoured}}
                     <li>
                         {{name}}
 
@@ -56,6 +55,6 @@
         </div>
     </main>
 
-
+    <script src="assets/javascript/ice.js"></script>
 
 </div>

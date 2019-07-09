@@ -27,6 +27,7 @@ router.post("/api/icecreams", function(req, res) {
 });
 
 router.put("/api/icecreams/:id", function(req, res) {
+  debugger;
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);

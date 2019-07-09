@@ -1,12 +1,14 @@
 $(function() {
-  $("#submit").on("submit", function(event) {
+  $("#submit").on("click", function(event) {
+    debugger;
     event.preventDefault();
 
     var newIceCream = {
       name: $("#usersInput")
         .val()
-        .trim(),
-      devoured: false
+        .trim()
+      //   ,
+      // devoured: false
     };
 
     $.ajax("/api/icecreams", {
@@ -20,6 +22,7 @@ $(function() {
   });
 
   $(".devourIt").on("click", function(event) {
+    debugger;
     var id = $(this).data("id");
     var devoured = $(this).data("devoured");
 
@@ -42,7 +45,7 @@ $(function() {
     var id = $(this).data("id");
 
     // Send the DELETE request.
-    $.ajax("/api/creams/" + id, {
+    $.ajax("/api/icecreams/" + id, {
       type: "DELETE"
     }).then(function() {
       console.log("deleted", id);
